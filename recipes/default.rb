@@ -95,6 +95,7 @@ template '/etc/nginx/sites-available/gitweb' do
     :server_root => node['gitweb']['server_root'],
     :default_server => node['gitweb']['nginx_default_server'],
     :http_to_https => node['gitweb']['nginx_http_to_https'],
+    :fcgi_include => node['gitweb']['nginx_fcgi_include'],
     :htpasswd => htpasswd_file,
     :ssl => ssl_file,
     :gitweb => node['gitweb']

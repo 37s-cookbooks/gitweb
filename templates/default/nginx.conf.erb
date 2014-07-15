@@ -27,7 +27,7 @@ server {
         gzip off;
 
         # FastCGI
-        include fastcgi_params;
+        include <%= @fcgi_include %>;
         fastcgi_param SCRIPT_NAME $uri;
         fastcgi_param GITWEB_CONFIG <%= @gitweb[:config] %>;
         fastcgi_pass unix:/var/run/fcgiwrap.socket;
@@ -46,7 +46,7 @@ server {
         root /usr/lib/git-core;
         rewrite ^/(.*)$ /git-http-backend/$1 break;
         # FastCGI
-        include fastcgi_params;
+        include <%= @fcgi_include %>;
         fastcgi_param SCRIPT_NAME /git-http-backend;
         fastcgi_param GIT_PROJECT_ROOT <%= @gitweb[:project_root] %>;
         fastcgi_param GIT_HTTP_EXPORT_ALL "";
