@@ -23,7 +23,7 @@ $stylesheet = "<% if @gitweb[:theme] %>theme/<% end %>gitweb.css";
 $javascript = "<% if @gitweb[:theme] %>theme/<% end %>gitweb.js";
 
 # logo to use
-$logo = "git-logo.png";
+$logo = "<% if @gitweb[:theme] %>theme/<% end %>git-logo.png";
 
 # the 'favicon'
 $favicon = "git-favicon.png";
