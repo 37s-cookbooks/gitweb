@@ -1,4 +1,5 @@
-require_recipe 'git'
+# temp disable till we sort out the depsolver
+#require_recipe 'git'
 include_recipe 'nginx'
 
 # Packages
