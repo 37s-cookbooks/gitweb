@@ -27,3 +27,7 @@ $logo = "<% if @gitweb[:theme] %>theme/<% end %>git-logo.png";
 
 # the 'favicon'
 $favicon = "git-favicon.png";
+
+# if set, this file must be present in .git or the bare repo in each project
+# to make them visible in gitweb
+$export_ok = "<%= @gitweb[:export_ok_file] %>";

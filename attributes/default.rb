@@ -6,6 +6,7 @@ default['gitweb']['project_root'] = '/home/git/repositories'
 default['gitweb']['base_url_list'] = []
 default['gitweb']['server_name'] = "git.#{node[:domain]}"
 default['gitweb']['server_root'] = '/usr/share/gitweb'
+default['gitweb']['export_ok_file'] = ''
 
 # Nginx settings
 default['gitweb']['nginx_host'] = nil
